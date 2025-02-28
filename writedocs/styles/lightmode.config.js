@@ -28,11 +28,19 @@ function editCSS(cssContent, config) {
   const luminance = getTextColor(navbarFinalColor);
   const isDark = luminance === "#000000";
 
+  const isMainEqualNavbarColor = mainColor === navbarColor;
+
   const variations = {
     ...definePrimaryColors(mainColor),
     ...defineNavbarColors(mainColor, navbarFinalColor),
     ...defineIcons(isDark),
-    ...defineNavbarItems(mainColor, isDark, luminance, logoSize),
+    ...defineNavbarItems(
+      mainColor,
+      isDark,
+      luminance,
+      logoSize,
+      isMainEqualNavbarColor
+    ),
     ...defineSidebar(navbar, homepage, logoSize),
     ...defineFixedValues(mainColor),
     ...defineBackground(images),

@@ -31,7 +31,7 @@ function editCSSDark(cssContent, styles, images) {
     ...definePrimaryColors(mainDarkColor),
     ...defineNavbarColors(mainDarkColor, navbarDarkColor, navbarBorderColor),
     ...defineIcons(isDark),
-    ...defineNavbarItems(mainColor, isDark, luminance),
+    ...defineNavbarItems(mainDarkColor, isDark, luminance),
     ...defineBackgroundDark(images),
     "--bg-defined-text-color": getTextColor(mainDarkColor),
     ...(backgroundDarkModeColor && {

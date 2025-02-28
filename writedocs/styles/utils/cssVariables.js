@@ -72,12 +72,26 @@ function defineIcons(isDark) {
   };
 }
 
-function defineNavbarItems(mainColor, isDark, luminance, logoSize = null) {
+function defineNavbarItems(
+  mainColor,
+  isDark,
+  luminance,
+  logoSize = null,
+  isMainEqualNavbarColor
+) {
+  const transparencyToMainColor = isDark
+    ? adjustLightness(mainColor, 0.2)
+    : adjustLightness(mainColor, -0.2);
+
   return {
     "--navbar-logo-height": logoSize ? LOGO_SIZES[logoSize] : LOGO_SIZES.small,
     "--navbar-font-color": luminance,
-    "--navbar-item-background-color": mainColor,
-    "--navbar-item-border-color": mainColor,
+    "--navbar-item-background-color": isMainEqualNavbarColor
+      ? transparencyToMainColor
+      : mainColor,
+    "--navbar-item-border-color": isMainEqualNavbarColor
+      ? transparencyToMainColor
+      : mainColor,
     "--navbar-item-font-color": isDark ? BLACKS[0] : WHITES[0],
     "--navbar-link-hover": isDark
       ? addTransparency(BLACKS[0], 0)

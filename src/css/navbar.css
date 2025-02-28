@@ -155,7 +155,7 @@
 
 .navbar__items {
   gap: 16px;
-  align-items: normal;
+  align-items: center;
 }
 
 .navbar__items .navbar__item:first-of-type {

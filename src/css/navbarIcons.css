@@ -70,7 +70,7 @@
 }
 
 .wd_navbar_link_btn {
-  background-color: var(--fixed-main-color) !important;
+  background-color: var(--navbar-item-background-color) !important;
   border: var(--border-thin) transparent !important;
   border-radius: 56px !important;
   color: var(--navbar-active-text-color) !important;
@@ -82,7 +82,7 @@
 }
 
 .wd_navbar_link_btn:hover {
-  background-color: var(--fixed-main-hover-color) !important;
+  background-color: var(--ifm-color-primary-dark) !important;
   color: var(--navbar-active-text-color) !important;
 }
 

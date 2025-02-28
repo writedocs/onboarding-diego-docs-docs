@@ -173,6 +173,11 @@ html {
   .col.col--12.markdown {
     padding: 0 16px !important;
   }
+
+  .wd_navbar_link_btn,
+  .wd_navbar_link_only {
+    display: none !important;
+  }
 }
 
 .navbar__title.text--truncate {

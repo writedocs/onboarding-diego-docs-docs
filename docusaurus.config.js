@@ -321,6 +321,7 @@ const config = {
   title: configurations.websiteName,
   tagline: configurations.description,
   favicon: configurations.images.favicon,
+  trailingSlash: true,
 
   // Set the production url of your site here
   url: retrieveCustomDomain(),
